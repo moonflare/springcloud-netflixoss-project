@@ -88,7 +88,7 @@
 			<version>1.0.0</version>
 			<exclusions>
 				<exclusion>
-					<groupId>com.amazonaws</groupId>calc
+					<groupId>com.amazonaws</groupId>
 					<artifactId>aws-java-sdk-sqs</artifactId>
 				</exclusion>
 			</exclusions>
