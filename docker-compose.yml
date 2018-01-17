@@ -17,11 +17,20 @@ services:
     depends_on: 
       - config
 
-#  gateway:
-#    build: ./gateway-server/.
-#    image: gateway-server
-#    restart: always
-#    ports:
-#      - 8765:8765
-#    depends_on: 
-#      - eureka
+  gateway:
+    build: ./gateway-server/.
+    image: gateway-server
+    restart: always
+    ports:
+     - 8765:8765
+    depends_on: 
+     - eureka
+
+  microservice:
+    build: ./microservice/.
+    image: microservice
+    restart: always
+    ports:
+      - 9094:9094
+    depends_on:
+      eureka

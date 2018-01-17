@@ -1,5 +1,5 @@
 FROM java:8-jre
-MAINTAINER Schoolastic <schoolastic@schoolastic-app.com>
+MAINTAINER Cleverson Ledur <cleversonledur@gmail.com>
 
 ADD ./target/config.jar /app/
 CMD ["java", "-Xmx200m", "-jar", "/app/config.jar"]
