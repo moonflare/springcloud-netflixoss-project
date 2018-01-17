@@ -3,9 +3,9 @@ spring.application.name : gateway-service-zuul
 server.port : 8765
 
 zuul.routes.producer.path : /email/**
-zuul.routes.producer.serviceId : EMAIL
+zuul.routes.producer.serviceId : microservice
 
-eureka.client.serviceUrl.defaultZone : http://localhost:9091/eureka/
+eureka.client.serviceUrl.defaultZone : http://eureka:9091/eureka/
 
 eureka:
   instance:

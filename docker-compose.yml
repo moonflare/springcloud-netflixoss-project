@@ -1,4 +1,4 @@
-version: '2.1'
+version: '3'
 services:
   
   config:
@@ -8,14 +8,14 @@ services:
     ports:
       - 9090:9090
 
+
   eureka:
     build: ./eureka-server/.
     image: eureka-server
     restart: always
     ports:
       - 9091:9091
-    depends_on: 
-      - config
+
 
   gateway:
     build: ./gateway-server/.
@@ -23,8 +23,7 @@ services:
     restart: always
     ports:
      - 8765:8765
-    depends_on: 
-     - eureka
+
 
   microservice:
     build: ./microservice/.
@@ -32,5 +31,5 @@ services:
     restart: always
     ports:
       - 9094:9094
-    depends_on:
-     - eureka
+
+

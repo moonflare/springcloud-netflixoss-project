@@ -3,9 +3,9 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: eureka
     port: 9091
-    appname: email
+    appname: microservice
   client:
     healthcheck:
       enabled: true

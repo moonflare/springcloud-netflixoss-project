@@ -4,4 +4,4 @@ MAINTAINER Cleverson Ledur <cleversonledur@gmail.com>
 ADD ./target/microservice.jar /app/
 CMD ["java", "-Xmx200m", "-jar", "/app/microservice.jar"]
 
-EXPOSE 8765
+EXPOSE 9094
