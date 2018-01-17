@@ -1,0 +1,27 @@
+version: '2.1'
+services:
+  
+  config:
+    build: ./config-server/.
+    image: config-server
+    restart: always
+    ports:
+      - 9090:9090
+
+  eureka:
+    build: ./eureka-server/.
+    image: eureka-server
+    restart: always
+    ports:
+      - 9091:9091
+    depends_on: 
+      - config
+
+#  gateway:
+#    build: ./gateway-server/.
+#    image: gateway-server
+#    restart: always
+#    ports:
+#      - 8765:8765
+#    depends_on: 
+#      - eureka

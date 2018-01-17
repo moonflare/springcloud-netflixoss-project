@@ -1,0 +1,117 @@
+
+spring.application.name : gateway-service-zuul
+server.port : 8765
+
+zuul.routes.producer.path : /email/**
+zuul.routes.producer.serviceId : EMAIL
+
+eureka.client.serviceUrl.defaultZone : http://localhost:9091/eureka/
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 3
+    metadataMap:
+      instanceId: ${spring.application.name}:${random.value}
+  client:
+    # Default values comes from org.springframework.cloud.netflix.eurek.EurekaClientConfigBean
+    registryFetchIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 5
+    initialInstanceInfoReplicationIntervalSeconds: 5
+
+feign:
+  hystrix:
+    enabled : true
+
+ribbon.IsSecure: true
+#----------------------
+
+#
+#info:
+#  component: Zuul Server
+#
+#endpoints:
+#  restart:
+#    enabled: true
+#  shutdown:
+#    enabled: true
+#  health:
+#    sensitive: false
+#
+#zuul:
+#  ignoredServices: "*"
+#  prefix: /api
+#  routes:
+#    email:
+#      sensitive-headers: Cookie,Set-Cookie
+#      path: /email/**
+#      service-id: email
+##      stripPrefix: false
+#
+#server:
+#  port: 8765
+#
+#logging:
+#  level:
+#    ROOT: INFO
+#
+#org.springframework.web: INFO
+#
+#eureka:
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:9091/eureka/
+#  instance:
+#    hostname: localhost
+#
+#spring:
+#  application:
+#    name: gateway-server
+
+
+#-----------------------
+
+#server:
+#  port: 8765
+#
+#security.basic.enable: false
+#management.security.enabled: false
+#
+#
+#zuul:
+#  ignoredServices: "*"
+#  prefix: /api
+#  routes:
+#    email:
+#      path: /email-service/**
+#      serviceId: EMAIL
+#  host:
+#    time-to-live: 30000
+#
+#eureka:
+#  instance:
+#    hostname: localhost
+#    preferIpAddress: false
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:9091/eureka/
+#
+#  server:
+#      wait-time-in-ms-when-sync-empty: 3000
+#
+## Increase the Hystrix timeout to 60s (for all)
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60000
+#
+#endpoints:
+#  routes:
+#    sensitive: true
+#
