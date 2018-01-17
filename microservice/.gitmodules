@@ -1,0 +1,3 @@
+[submodule "src/main/resources/templates"]
+	path = src/main/resources/templates
+	url = git@bitbucket.org:schoolastic-app/transactional-emails.git
