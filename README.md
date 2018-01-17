@@ -33,28 +33,6 @@ For starting up the infraestructure, run the projects using the following order:
 	I recommend using Eclipse/Intellij for debugging.
 	It will start on http://localhost:8765
 
-## Reproducing the problem
-
-After all the infraestructure is running, create a request (POST) for the following URI:
-
-	http://localhost:8765/api/email-service/v1/message/new
-
-### With the following payload:
-
-#### Header
-
-	[{"key":"x-api-key","value":"039175eef96048cfb180c295d15e21e1","description":""},{"key":"Content-Type","value":"application/json","description":""}]
-
-#### Body
-
-	{
-	"toEmail" : "cleverson.ledur@schoolastic-app.com",
-	"values" : [
-		{"name":"{{NAME}}", "value" : "test"},
-		{"name":"{{EMAIL}}", "value" : "cleverson.ledur@schoolastic-app.com"}
-		],
-	"templateType":"newResponsibleUser"
-	}
 
 ## Problem
 
