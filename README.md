@@ -38,7 +38,7 @@ For starting up the infraestructure, run the projects using the following order:
 
 You will receive a 500 error message. In Zuul (gateway-service) project, you can check the stack with the following message error: "Load balancer does not have available server for client".
 
-# Reproducing
+# Reproducing the Problem
 
 GET request to  http://localhost:8765/email/test (using Zuul)
 
