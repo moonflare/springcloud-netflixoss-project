@@ -6,7 +6,7 @@
 
 You will receive a 500 error message. In Zuul (gateway-service) project, you can check the stack with the following message error: "Load balancer does not have available server for client".
 
-# Reproducing the Problem
+## Reproducing the Problem
 
 GET request to  http://localhost:8765/email/test (using Zuul)
 
@@ -20,11 +20,11 @@ This produces the following error:
     "message": "GENERAL"
 }`
 
-# With Docker
+## With Docker
 
 1. Run `./buildup.sh` file.
 
-## References
+### References
 
 - https://www.infoq.com/br/articles/desmistificando-spring-cloud-netflix
 - https://coderef.com.br/arquitetura-de-microservices-com-spring-cloud-e-spring-boot-parte-3-b84b3dce13a0
