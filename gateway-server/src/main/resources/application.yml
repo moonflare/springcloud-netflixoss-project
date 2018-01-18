@@ -14,15 +14,16 @@ eureka:
       instanceId: ${spring.application.name}:${random.value}
   client:
     # Default values comes from org.springframework.cloud.netflix.eurek.EurekaClientConfigBean
-    registryFetchIntervalSeconds: 5
-    instanceInfoReplicationIntervalSeconds: 5
-    initialInstanceInfoReplicationIntervalSeconds: 5
-
+#    registryFetchIntervalSeconds: 5
+#    instanceInfoReplicationIntervalSeconds: 5
+#    initialInstanceInfoReplicationIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:9091/eureka/
 feign:
   hystrix:
     enabled : true
 
-ribbon.IsSecure: true
+#ribbon.IsSecure: true
 #----------------------
 
 #
