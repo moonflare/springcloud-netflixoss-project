@@ -1,14 +1,7 @@
-version: '3'
+version: '2' 
+
 services:
   
-  config:
-    build: ./config-server/.
-    image: config-server
-    restart: always
-    ports:
-      - 9090:9090
-
-
   eureka:
     build: ./eureka-server/.
     image: eureka-server
