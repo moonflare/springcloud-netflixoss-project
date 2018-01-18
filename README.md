@@ -1,6 +1,7 @@
 
 # micro-services-config
 
+This is a simple project infraestructure for creating microservices using Spring Cloud and Netflix OSS. 
 
 ## Problem
 
