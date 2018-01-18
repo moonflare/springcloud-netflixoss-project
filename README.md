@@ -24,7 +24,7 @@ For starting up the infraestructure, run the projects using the following order:
 
 	You can configure in Eclipse/Intellij or use the command `./mvnw clean install -X -U` inside the directory to build this.
 
-5. Check in http://localhost:9091 if the "email-service" is listed on "Instances currently registered with Eureka".
+5. Check in http://localhost:9091 if the "microservice" is listed on "Instances currently registered with Eureka".
 
 
 6. Run the Zuul project available in gateway-server folder.
@@ -37,6 +37,21 @@ For starting up the infraestructure, run the projects using the following order:
 ## Problem
 
 You will receive a 500 error message. In Zuul (gateway-service) project, you can check the stack with the following message error: "Load balancer does not have available server for client".
+
+# Reproducing
+
+GET request to  http://localhost:8765/email/test (using Zuul)
+
+This produces the following error:
+
+`{
+    "timestamp": 1516279185321,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "com.netflix.zuul.exception.ZuulException",
+    "message": "GENERAL"
+}`
+
 
 
 # With Docker

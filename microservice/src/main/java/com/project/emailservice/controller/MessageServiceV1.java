@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/v1/message/")
+@RequestMapping("/")
 
 public class MessageServiceV1 {
 
 
-    @RequestMapping(value="/new", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity newMessage() throws IOException {
+    @RequestMapping(value="/test", method = RequestMethod.GET)
+    public ResponseEntity newMessage(String s) throws IOException {
 
         String body = "Ok";
         return ResponseEntity.ok().body(body);
