@@ -1,37 +1,5 @@
 
 # micro-services-config
-## Without Docker
-
-
-For starting up the infraestructure, run the projects using the following order:
-
-1. Run the project inside config-server folder.
-	
-	You can configure in Eclipse/Intellij or use the command `./mvnw clean install -X -U` inside the directory to build this.
-	It will be available on `localhost:9090`.
-
-2. Run the project inside eureka-server folder.
-	
-	You can configure in Eclipse/Intellij or use the command `./mvnw clean install -X -U` inside the directory to build this.
-	Check if it is up by accessing http://localhost:9091
-		
-3. Checkout email-service project (any folder).
-
-	You can configure in Eclipse/Intellij or use the command `./mvnw clean install -X -U` inside the directory to build this.
-
-
-4. Run the service (email-template) available in repository https://bitbucket.org/schoolastic-app/email-service.
-
-	You can configure in Eclipse/Intellij or use the command `./mvnw clean install -X -U` inside the directory to build this.
-
-5. Check in http://localhost:9091 if the "microservice" is listed on "Instances currently registered with Eureka".
-
-
-6. Run the Zuul project available in gateway-server folder.
-
-	You can configure in Eclipse/Intellij or use the command `./mvnw clean install -X -U` inside the directory to build this.
-	I recommend using Eclipse/Intellij for debugging.
-	It will start on http://localhost:8765
 
 
 ## Problem
@@ -51,8 +19,6 @@ This produces the following error:
     "exception": "com.netflix.zuul.exception.ZuulException",
     "message": "GENERAL"
 }`
-
-
 
 # With Docker
 
