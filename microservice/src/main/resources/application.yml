@@ -2,21 +2,21 @@ server:
   port: 9094
 
 eureka:
-  instance:
-    hostname: eureka
-    port: 9091
-    appname: microservice
+#  instance:
+#    hostname: eureka
+#    port: 9091
+#    appname: microservice
   client:
     healthcheck:
       enabled: true
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+      defaultZone: http://localhost:9091/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
 ribbon:
-    eureka:
-        enabled: true
+  eureka:
+    enabled: true
 
