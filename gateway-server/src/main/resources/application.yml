@@ -18,7 +18,7 @@ eureka:
 #    instanceInfoReplicationIntervalSeconds: 5
 #    initialInstanceInfoReplicationIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://localhost:9091/eureka/
+      defaultZone: http://eureka:9091/eureka/
 feign:
   hystrix:
     enabled : true
